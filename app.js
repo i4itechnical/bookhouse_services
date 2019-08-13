@@ -4,7 +4,8 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const expressValidator = require("express-validator");
-require("dotenv").config();
+const dotenv= require("dotenv").config();
+
 // import routes
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
@@ -16,9 +17,10 @@ const cors = require('cors');
 // app
 const app = express();
 
+
 // db
 mongoose
-    .connect(process.env.DATABASE, {
+    .connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
         useCreateIndex: true
     })
