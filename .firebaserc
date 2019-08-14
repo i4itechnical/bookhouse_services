@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "production": "bookhouse-services",
+    "default": "bookhouse-services"
+  }
+}
